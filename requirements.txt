@@ -1,0 +1,1 @@
+pip install pandas numpy scikit-learn xgboost lightgbm optuna shap matplotlib seaborn statsmodels missingno joblib pyyaml tqdm gradio jupyterlab ipykernel kaggle plotly kaleido
