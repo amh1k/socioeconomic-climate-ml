@@ -67,3 +67,59 @@ def engineer_full_pipeline(df: pd.DataFrame) -> pd.DataFrame:
     df = add_temporal_features(df)
     print(f"Feature engineering complete. Final shape: {df.shape}")
     return df
+
+
+def select_final_features(df: pd.DataFrame) -> pd.DataFrame:
+    """Reduce to 10 high-value features based on EDA + domain knowledge."""
+    keep_cols = [
+        'GDP_per_Capita', 'Population', 'Renewable_Ratio', 
+        'Fossil_Fuel_Usage', 'Energy_Consumption_Per_Capita',
+        'Urbanization', 'Policy_Score', 'CO2_Emissions_lag1',
+        'GDP_roll5_mean', 'Decade'
+    ]
+    
+    # Verify all exist
+    missing = [c for c in keep_cols if c not in df.columns]
+    if missing:
+        raise ValueError(f"Missing engineered columns: {missing}")
+        
+    print(f"Feature selection: Keeping {len(keep_cols)} features out of {df.shape[1]-2}")
+    return df[keep_cols]
+def select_features_by_importance(X_train, y_train, n_features=20, random_state=42):
+    """
+    Select top N features based on Random Forest importance.
+    
+    Args:
+        X_train: Training features (DataFrame)
+        y_train: Training targets (DataFrame, multi-output)
+        n_features: Number of features to keep
+        random_state: For reproducibility
+    
+    Returns:
+        List of selected feature names
+    """
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.multioutput import MultiOutputRegressor
+    
+    # Train a quick RF on full feature set
+    rf = MultiOutputRegressor(
+        RandomForestRegressor(n_estimators=50, max_depth=5, random_state=random_state, n_jobs=-1)
+    )
+    rf.fit(X_train, y_train)
+    
+    # Aggregate importance across both targets
+    importances = np.mean([est.feature_importances_ for est in rf.estimators_], axis=0)
+    
+    # Get top N feature names
+    feature_importance = pd.DataFrame({
+        'feature': X_train.columns,
+        'importance': importances
+    }).sort_values('importance', ascending=False)
+    
+    selected = feature_importance.head(n_features)['feature'].tolist()
+    print(f"Selected {n_features} features by importance:")
+    for i, (feat, imp) in enumerate(zip(feature_importance.head(n_features)['feature'], 
+                                       feature_importance.head(n_features)['importance']), 1):
+        print(f"  {i}. {feat}: {imp:.4f}")
+    
+    return selected
