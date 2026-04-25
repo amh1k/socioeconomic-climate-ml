@@ -123,3 +123,36 @@ def select_features_by_importance(X_train, y_train, n_features=20, random_state=
         print(f"  {i}. {feat}: {imp:.4f}")
     
     return selected
+
+
+
+def select_socioeconomic_features(X: pd.DataFrame) -> pd.DataFrame:
+    """
+    Filter DataFrame to retain ONLY socioeconomic, demographic, and policy features.
+    Excludes environmental, climate, physical, and energy-system variables.
+    """
+    # Core socioeconomic/demographic/policy features
+    base_cols = [
+        'Population', 'GDP', 'Urbanization', 'Policy_Score',
+        'Energy_Consumption_Per_Capita', 'Waste_Management',
+        'Industrial_Activity', 'GDP_per_Capita', 'Policy_GDP_Interaction', 'Decade'
+    ]
+    base_cols.extend(['Renewable_Energy_Usage', 'Fossil_Fuel_Usage', 'Solar_Energy_Potential'])
+    
+    # Include lagged/rolling variants of purely economic/demographic columns
+    temporal_bases = ['GDP', 'Population', 'Energy_Consumption_Per_Capita', 'Policy_Score','Renewable_Energy_Usage', 'Fossil_Fuel_Usage']
+    suffixes = ['_lag1', '_lag5', '_roll5_mean', '_roll5_std']
+    
+    all_socio_cols = base_cols.copy()
+    for base in temporal_bases:
+        for suffix in suffixes:
+            all_socio_cols.append(f"{base}{suffix}")
+            
+    # Filter to columns that actually exist in the input DataFrame
+    final_cols = [col for col in all_socio_cols if col in X.columns]
+    
+    if not final_cols:
+        raise ValueError("No socioeconomic features found. Verify column names.")
+        
+    print(f"✅ Filtered to {len(final_cols)} socioeconomic features: {final_cols}")
+    return X[final_cols]
