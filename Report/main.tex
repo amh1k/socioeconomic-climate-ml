@@ -132,6 +132,44 @@ The purpose of this project is to develop, evaluate, and interpret a reproducibl
     \item Interpret model predictions using SHAP to identify target-specific feature drivers and visualize non-linear marginal effects.
     \item Evaluate the scientific validity of socioeconomic-only forecasting for emissions versus temperature anomalies.
 \end{enumerate}
+%==============================================================================
+%==============================================================================
+% SECTION: EXPLORATORY DATA ANALYSIS (CONCISE VERSION)
+%==============================================================================
+\section{Exploratory Data Analysis}
+
+We conducted exploratory data analysis to understand temporal patterns and feature relationships, which directly informed our modeling strategy.
+
+\subsection{Temporal Trends}
+
+Figure~\ref{fig:climate_trends} shows historical trends of Temperature Anomaly and CO$_2$ Emissions (1900--2023). Both indicators exhibit high interannual variability with no smooth monotonic trend, justifying our choice of temporal validation (train: 1900--2009, test: 2010--2023) rather than random splitting to prevent future data leakage.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/eda_global_trends.png}
+    \caption{Historical trends of Temperature Anomaly (°C, red) and CO$_2$ Emissions (Mt, blue) from 1900 to 2023. The vertical dashed line at 2010 indicates the train/test split. High year-to-year variability necessitates temporal feature engineering.}
+    \label{fig:climate_trends}
+\end{figure}
+
+\subsection{Feature-Target Relationships}
+
+Pearson correlation analysis (Figure~\ref{fig:target_correlations}) reveals a critical asymmetry:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/eda_target_correlations_both.png}
+    \caption{Feature correlations with Temperature Anomaly (left) and CO$_2$ Emissions (right). All correlations with Temperature are negligible ($|r| < 0.02$), while CO$_2$ shows modest linear associations.}
+    \label{fig:target_correlations}
+\end{figure}
+
+\noindent\textbf{Key findings}:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Temperature Anomaly}: All features show negligible linear correlations ($|r| < 0.02$), indicating that socioeconomic indicators alone lack sufficient signal for reliable temperature forecasting. This explains why all models achieve R$^2 < 0$ for this target.
+    
+    \item \textbf{CO$_2$ Emissions}: Modest but non-zero correlations ($|r| \approx 0.01$--0.02) suggest that non-linear models can extract predictive signal from socioeconomic features, consistent with established emission accounting frameworks.
+\end{itemize}
+
+\noindent These findings justify our multi-target approach with separate interpretation for each target, as they exhibit fundamentally different predictability from socioeconomic data.
 
 % 6. Methodology
 \section{Methodology}
@@ -269,6 +307,13 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
     \item \textbf{Hyperparameter tuning} improved macro R$^2$ from 0.311 (default XGBoost) to 0.477 (tuned) primarily by stabilizing generalization, not by improving Temperature prediction.
     \item \textbf{Computational efficiency}: XGBoost/LightGBM achieve near-identical accuracy to Random Forest in $<$1 second vs.\ 142 seconds.
 \end{itemize}
+% IMAGE 1 - Model comparison bars
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/final_model_comparison.png}  % IMAGE 1
+    \caption{Macro-averaged model performance...}
+    \label{fig:model_comparison}
+\end{figure}
 
 \subsection{Interpretation Results (SHAP Analysis)}
 \subsubsection{Global Feature Importance}
@@ -282,13 +327,21 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
 \begin{figure}[h!]
     \centering
     % REPLACE WITH: shap_summary_both_targets.png (or separate temp/co2 files)
-    \includegraphics[width=0.95\textwidth]{figures/PLACEHOLDER_shap_summary.png}
+    \includegraphics[width=0.95\textwidth]{figures/shap_summary_co2.png}
     \caption{SHAP summary (beeswarm) plots showing global feature importance for both targets. 
     Red = high feature value, Blue = low feature value. 
     Rightward shift = positive contribution to prediction. 
     \textit{Note: Replace this placeholder with your actual SHAP summary figure from \texttt{outputs/figures/}.}}
     \label{fig:shap_summary}
 \end{figure}
+% IMAGE 3 - Top 10 correlation (optional, supporting SHAP)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/eda_target_correlations_both.png}  % IMAGE 3
+    \caption{Top 10 features correlation...}
+    \label{fig:top10}
+\end{figure}
+
 
 \noindent\textbf{Interpretation}:
 \begin{itemize}[leftmargin=*]
@@ -307,7 +360,7 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
 \begin{figure}[h!]
     \centering
     % REPLACE WITH: shap_marginal_effects_comparison.png
-    \includegraphics[width=0.95\textwidth]{figures/PLACEHOLDER_marginal_effects.png}
+    \includegraphics[width=0.95\textwidth]{figures/shap_marginal_effects_comparison.png}
     \caption{Marginal effect plots (decile-binned SHAP averages) for key interpretable drivers. 
     Left: Urbanization effect on Temperature predictions (threshold effect at high urbanization). 
     Right: Population effect on CO$_2$ predictions (near-linear scaling). 
