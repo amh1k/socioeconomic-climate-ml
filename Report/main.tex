@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
+\usepackage{amsmath}
 \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -38,7 +39,7 @@
 \onehalfspacing
 
 % Section formatting
-\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries}{}{0em}{\MakeUppercase}[\titlerule]
 \titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
 
 % Hyperlink setup
@@ -50,6 +51,7 @@
 }
 
 % Title page metadata
+% === TITLE PAGE ===
 \title{
     \vspace{-2cm}
     \textbf{\Large Predicting Climate Anomalies and Emissions from Socioeconomic Indicators: \\ A Multi-Target Machine Learning Approach}
@@ -57,10 +59,10 @@
 }
 \author{
     \textbf{Group Members:}\\[0.3cm]
-    Abdul Moiz Hussain – 23K-0553\\
-    [Muhammed Abdullah Khan] – 23K-0607\\
-    [Name 3] – [ID/Role]\\
-    [Name 4] – [ID/Role]
+    Abdul Moiz Hussain -- 23K-0553\\
+    Muhammed Abdullah Khan -- 23K-0607\\
+    Name 3 -- [ID/Role]\\
+    Name 4 -- [ID/Role]
 }
 \date{
     \textbf{Course:} Data Science\\
@@ -75,6 +77,7 @@
 \maketitle
 \thispagestyle{empty}
 \newpage
+\tableofcontents
 
 % Abstract (optional for proposal, required for final paper)
 \section*{Abstract}
@@ -85,7 +88,7 @@ Global climate change poses unprecedented challenges to ecological stability, pu
 \noindent\textbf{Keywords:} climate forecasting, multi-target regression, socioeconomic indicators, machine learning, SHAP interpretation, temporal validation
 
 \newpage
-\tableofcontents
+
 \newpage
 
 % 1. Introduction
@@ -233,7 +236,7 @@ To ensure full reproducibility:
     \item \textbf{Fixed random seeds}: \texttt{RANDOM\_STATE = 42} across all stochastic operations
     \item \textbf{Temporal leakage prevention}: Strict train/test split at year 2010; all preprocessing (scaling, imputation) fit exclusively on training data
     \item \textbf{Artifact versioning}: Models, scalers, and SHAP explainers serialized via \texttt{joblib} with explicit version tracking
-    \item \textbf{Environment capture}: \texttt{requirements.txt} documenting exact package versions (see Appendix~\ref{app:requirements})
+    \item \textbf{Environment capture}: \texttt{requirements.txt} documenting exact package versions 
 \end{enumerate}
 
 \subsection{Key Implementation Snippets}
@@ -291,22 +294,26 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
         \textbf{Model} & \textbf{Temp R$^2$} & \textbf{Temp RMSE} & \textbf{CO$_2$ R$^2$} & \textbf{CO$_2$ RMSE} & \textbf{Macro R$^2$} & \textbf{Train Time} \\
         & & \textit{($^\circ$C)} & & \textit{(Mt)} & & \\
         \midrule
-        Ridge Baseline & 0.0014 & 0.656 & 0.2704 & $1.41 \times 10^8$ & 0.0911 & 0.23\,s \\
-        Decision Tree & -0.0195 & 0.668 & 0.9823 & $2.15 \times 10^7$ & 0.2814 & 0.15\,s \\
+        Ridge Baseline & -0.0008 & 0.656 & 0.0046 & $1.41 \times 10^8$ & 0.010 & 0.0321\,s \\
+        Decision Tree & -0.0114 & 0.668 & 0.8188 & $2.15 \times 10^7$ & 0.2653 & 0.7544\,s \\
         Random Forest & -0.0133 & 0.660 & \textbf{0.9964} & $9.88 \times 10^6$ & 0.3232 & 142.1\,s \\
         XGBoost (Default) & -0.0275 & 0.665 & 0.9878 & $1.82 \times 10^7$ & 0.3109 & 0.88\,s \\
-        \textbf{XGBoost (Tuned)} & \textbf{-0.0280} & \textbf{0.663} & 0.9890 & \textbf{$1.79 \times 10^7$} & \textbf{0.4770} & 0.91\,s \\
-        LightGBM & -0.0251 & 0.661 & 0.9901 & $1.75 \times 10^7$ & 0.4825 & 0.76\,s \\
+        \textbf{XGBoost (Tuned)} & \textbf{-0.052} & \textbf{0.663} & 0.9865 & \textbf{$1.79 \times 10^7$} & \textbf{0.3254} & 0.91\,s \\
+        LightGBM & -0.0306 & 0.661 & 0.9892 & $1.75 \times 10^7$ & 0.3093 & 0.76\,s \\
         \bottomrule
     \end{tabular}
 \end{table}
 \noindent\textbf{Key observations}:
 \begin{itemize}[leftmargin=*]
-    \item \textbf{CO$_2$ emissions} are highly predictable (R$^2$ $>$ 0.98) across all tree-based models, confirming strong deterministic relationships with socioeconomic scale variables.
-    \item \textbf{Temperature anomalies} yield negative R$^2$ across all architectures, indicating that socioeconomic features alone lack sufficient signal to exceed a naive mean baseline.
-    \item \textbf{Decision Tree baseline} achieves reasonable CO$_2$ performance (R$^2$ = 0.982) with minimal training time (0.15\,s), demonstrating that even simple non-linear models capture emission dynamics better than linear approaches.
-    \item \textbf{Hyperparameter tuning} improved macro R$^2$ from 0.311 (default XGBoost) to 0.477 (tuned) primarily by stabilizing generalization, not by improving Temperature prediction.
-    \item \textbf{Computational efficiency}: XGBoost/LightGBM achieve near-identical accuracy to Random Forest in $<$1 second vs.\ 142 seconds.
+    \item \textbf{CO$_2$ emissions} are highly predictable (R$^2$ $>$ 0.98) for Random Forest, XGBoost, and LightGBM, confirming strong deterministic relationships with socioeconomic scale variables. The Decision Tree baseline achieves moderate performance (R$^2$ = 0.819), while Ridge Regression fails (R$^2$ = 0.005).
+    
+    \item \textbf{Temperature anomalies} yield negative R$^2$ across all architectures, indicating that socioeconomic features alone lack sufficient signal to exceed a naive mean baseline. The best Temperature R$^2$ is -0.0008 (Ridge), confirming the fundamental predictability limit.
+    
+    \item \textbf{Decision Tree baseline} achieves reasonable CO$_2$ performance (R$^2$ = 0.819) with modest training time (0.75\,s), demonstrating that even simple non-linear models capture emission dynamics better than linear approaches, though ensembles provide substantial gains.
+    
+    \item \textbf{Hyperparameter tuning} provided marginal improvement in macro R$^2$ (0.311 $\rightarrow$ 0.325 for XGBoost), suggesting the default parameters were already well-suited to this dataset. The primary benefit was stabilizing generalization rather than boosting raw accuracy.
+    
+    \item \textbf{Computational efficiency}: XGBoost/LightGBM achieve near-identical accuracy to Random Forest in $<$1 second vs.\ 142 seconds, making them preferable for iterative experimentation.
 \end{itemize}
 % IMAGE 1 - Model comparison bars
 \begin{figure}[h!]
@@ -327,12 +334,29 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
 %==============================================================================
 \begin{figure}[h!]
     \centering
-    % REPLACE WITH: shap_summary_both_targets.png (or separate temp/co2 files)
-    \includegraphics[width=0.95\textwidth]{figures/shap_summary_co2.png}
+    % Subfigure 1: Temperature Anomaly
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/shap_summary_temp.png}
+        \caption{Temperature Anomaly drivers}
+        \label{fig:shap_temp}
+    \end{subfigure}
+    \hfill
+    % Subfigure 2: CO2 Emissions
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/shap_summary_co2.png}
+        \caption{CO$_2$ Emissions drivers}
+        \label{fig:shap_co2}
+    \end{subfigure}
+    
+    % Main caption for the combined figure
     \caption{SHAP summary (beeswarm) plots showing global feature importance for both targets. 
     Red = high feature value, Blue = low feature value. 
     Rightward shift = positive contribution to prediction. 
-    \textit{Note: Replace this placeholder with your actual SHAP summary figure from \texttt{outputs/figures/}.}}
+    Note the stark contrast: CO$_2$ predictions are dominated by economic scale features 
+    (\texttt{Population}, \texttt{GDP\_per\_Capita}), while Temperature shows weak, 
+    diffuse associations with policy and urbanization metrics.}
     \label{fig:shap_summary}
 \end{figure}
 % IMAGE 3 - Top 10 correlation (optional, supporting SHAP)
@@ -385,43 +409,49 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
     \centering
     \caption{Model characteristics and practical considerations.}
     \label{tab:model_comparison}
+    % \resizebox scales the table to exactly fit the text width without overflow
+    \resizebox{\textwidth}{!}{%
     \begin{tabular}{lccccc}
         \toprule
         \textbf{Dimension} & \textbf{Ridge} & \textbf{Decision Tree} & \textbf{Random Forest} & \textbf{XGBoost (Tuned)} & \textbf{LightGBM} \\
         \midrule
         \textbf{Assumption} & Linear + L2 reg. & Single tree, depth-limited & Non-linear, bagging & Gradient boosting & Histogram boosting \\
-        \textbf{CO$_2$ R$^2$} & 0.27 & 0.982 & 0.996 & 0.989 & 0.990 \\
-        \textbf{Temp R$^2$} & 0.001 & -0.020 & -0.013 & -0.028 & -0.025 \\
-        \textbf{Train Time} & 0.23\,s & 0.15\,s & 142\,s & 0.91\,s & 0.76\,s \\
+        % FIXED: Added missing "& 0.990" and corrected "00.9878" typo
+       \textbf{CO$_2$ R$^2$} & 0.0046 & 0.8188 & 0.996 & 0.9865 & 0.9892 \\
+\textbf{Temp R$^2$} & -0.0008 & -0.0114 & -0.013 & -0.052 & -0.0306 \\
+        \textbf{Train Time} & 0.0321\,s & 0.15\,s & 142\,s & 0.91\,s & 0.76\,s \\
         \textbf{Overfitting Risk} & Low (high bias) & Moderate (constrained) & Moderate & Low (regularized) & Low \\
         \textbf{Interpretability} & High (coefficients) & \textbf{Very High (rules)} & Medium (permutation) & Medium (SHAP) & Medium (SHAP) \\
         \bottomrule
-    \end{tabular}
+    \end{tabular}%
+    }
 \end{table}
 \noindent\textbf{Key insights}:
 \begin{enumerate}[label=(\arabic*), leftmargin=*]
-    \item \textbf{Non-linearity is essential for CO$_2$}: Tree-based models capture interaction effects (e.g., \texttt{GDP $\times$ Energy\_Usage}) that linear models miss, explaining the R$^2$ jump from 0.27 (Ridge) to $>$0.98 (trees).
+    \item \textbf{Non-linearity is essential for CO$_2$}: Tree-based models capture interaction effects that linear models miss, explaining the R$^2$ jump from 0.005 (Ridge) to $>$0.98 (ensembles). The Decision Tree's intermediate performance (R$^2$ = 0.819) confirms that non-linearity alone provides substantial gains.
     
-    \item \textbf{Tuning stabilizes generalization}: Optuna optimization reduced test-set variance by selecting conservative hyperparameters (\texttt{max\_depth=4}, \texttt{subsample=0.625}), improving macro R$^2$ by 53\% without sacrificing CO$_2$ accuracy.
+    \item \textbf{Tuning provides marginal gains}: Optuna optimization improved macro R$^2$ modestly (0.311 $\rightarrow$ 0.325 for XGBoost), indicating that default hyperparameters were already near-optimal for this feature set and temporal split.
     
-    \item \textbf{Speed vs.\ accuracy}: XGBoost/LightGBM match Random Forest performance in $<$1 second, making them preferable for iterative experimentation and hyperparameter search.
+    \item \textbf{Speed vs.\ accuracy trade-off}: Random Forest achieves the highest CO$_2$ R$^2$ (0.996) but requires 142\,s training time. XGBoost/LightGBM match this performance within 1\,s, offering the best practical balance for production use.
     
-    \item \textbf{Target asymmetry}: No model overcomes Temperature's weak signal, proving the limitation is data-driven (missing physical climate variables), not algorithmic.
+    \item \textbf{Target asymmetry is fundamental}: No model achieves positive R$^2$ for Temperature, proving the limitation is data-driven (missing physical climate variables), not algorithmic. This asymmetry justifies target-specific interpretation rather than aggregated evaluation.
 \end{enumerate}
 
 \subsection{Target-Specific Model Behavior}
 \subsubsection{CO$_2$ Emissions: Deterministic Predictability}
-All tree-based models converge on near-perfect prediction (R$^2$ $>$ 0.98), reflecting strong mechanistic links between socioeconomic scale and aggregate emissions. Performance plateaus early—additional model complexity yields diminishing returns. SHAP analysis confirms that \texttt{Population} and \texttt{GDP\_per\_Capita} dominate predictions, consistent with the Kaya identity decomposition:
+Random Forest, XGBoost, and LightGBM converge on near-perfect CO$_2$ prediction (R$^2$ $>$ 0.98), while the Decision Tree achieves moderate performance (R$^2$ = 0.819) and Ridge Regression fails (R$^2$ = 0.005). This hierarchy confirms that non-linear interactions are essential for capturing emission dynamics.
 \[
 \text{CO}_2 = \text{Population} \times \frac{\text{GDP}}{\text{Population}} \times \frac{\text{Energy}}{\text{GDP}} \times \frac{\text{CO}_2}{\text{Energy}}
 \]
 
 \subsubsection{Temperature Anomaly: Fundamental Predictability Limit}
-Negative R$^2$ across all architectures indicates that socioeconomic features alone cannot reliably forecast temperature anomalies. This is not a modeling failure but a scientific finding: temperature dynamics depend on physical processes (ocean circulation, radiative forcing, aerosol effects) not captured in socioeconomic indicators. The consistent RMSE $\approx$ 0.66$^\circ$C across models suggests this represents the irreducible error floor for socioeconomic-only forecasting.
+Negative R$^2$ across all architectures indicates that socioeconomic features alone cannot reliably forecast temperature anomalies. This is not a modeling failure but a scientific finding: temperature dynamics depend on physical processes (ocean circulation, radiative forcing, aerosol effects) not captured in socioeconomic indicators. % NEW:
+The consistent RMSE $\approx$ 0.66$^\circ$C and uniformly negative R$^2$ (best: -0.0008 for Ridge) across models suggests this represents the irreducible error floor for socioeconomic-only temperature forecasting.
 
 \subsection{Practical Recommendations}
 \begin{itemize}[leftmargin=*]
-    \item \textbf{For emission forecasting}: Use XGBoost or LightGBM with importance-based feature selection. The near-perfect performance validates socioeconomic indicators as reliable proxies for macro-level emission trajectories.
+    
+\item \textbf{For emission forecasting}: Use XGBoost or LightGBM for optimal accuracy-speed balance. The Decision Tree offers a transparent, interpretable alternative with reasonable performance (R$^2$ = 0.819) when model auditability is prioritized over marginal accuracy gains.
     
     \item \textbf{For temperature modeling}: Socioeconomic-only pipelines are insufficient. Future work should integrate physical climate variables (e.g., sea surface temperature, aerosol optical depth) or adopt hybrid physics-ML architectures.
     
@@ -434,22 +464,6 @@ Negative R$^2$ across all architectures indicates that socioeconomic features al
 \printbibliography
 
 % Optional: Appendix for TBW proposal
-\section*{Appendix: Project Timeline}
-\addcontentsline{toc}{section}{Appendix}
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|l|l|l|}
-        \hline
-        \textbf{Phase} & \textbf{Duration} & \textbf{Deliverables} \\
-        \hline
-        Data Collection \& Cleaning & Weeks 1--2 & Cleaned panel dataset, EDA report \\
-        Feature Engineering & Weeks 3--4 & Engineered feature set, selection report \\
-        Model Development & Weeks 5--7 & Trained models, hyperparameter logs \\
-        Evaluation \& Interpretation & Weeks 8--9 & Performance tables, SHAP figures \\
-        Report Writing \& Submission & Weeks 10--12 & Final paper, code repository, presentation \\
-        \hline
-    \end{tabular}
-    \caption{Proposed project timeline}
-\end{table}
+
 
 \end{document}

@@ -1,0 +1,169 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{smith2023mlclimate}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d0ddda3a367ceb26fbaeca02e391c22}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b07d8ae1892af180c85e46a0e2c42c6a}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=00d20f13d671aa86d9dd7d03dde55c46}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Raj},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d05b2cf738af6ea5fe08887b681d257}
+      \strng{fullhash}{5b80d502e2711be8eca3056e894b4e46}
+      \strng{fullhashraw}{5b80d502e2711be8eca3056e894b4e46}
+      \strng{bibnamehash}{5b80d502e2711be8eca3056e894b4e46}
+      \strng{authorbibnamehash}{5b80d502e2711be8eca3056e894b4e46}
+      \strng{authornamehash}{2d05b2cf738af6ea5fe08887b681d257}
+      \strng{authorfullhash}{5b80d502e2711be8eca3056e894b4e46}
+      \strng{authorfullhashraw}{5b80d502e2711be8eca3056e894b4e46}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environmental Data Science}
+      \field{number}{3}
+      \field{title}{Machine learning for climate projection: A review}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{pages}{45\bibrangedash 67}
+      \range{pages}{23}
+    \endentry
+    \entry{raupach2007kaya}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=395688f604c151053b585e2323d88a17}{%
+           family={Raupach},
+           familyi={R\bibinitperiod},
+           given={Michael\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=499fb39eb6bace4fbd5176419e2c990d}{%
+           family={Marland},
+           familyi={M\bibinitperiod},
+           given={Gregg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6e67f77fe4702964e6cd500a96516c8a}{%
+           family={Ciais},
+           familyi={C\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5ba648a10d2fcfffa9a861b5a376eed}
+      \strng{fullhash}{0a35ec0142f2f6403ad999e580458038}
+      \strng{fullhashraw}{0a35ec0142f2f6403ad999e580458038}
+      \strng{bibnamehash}{0a35ec0142f2f6403ad999e580458038}
+      \strng{authorbibnamehash}{0a35ec0142f2f6403ad999e580458038}
+      \strng{authornamehash}{a5ba648a10d2fcfffa9a861b5a376eed}
+      \strng{authorfullhash}{0a35ec0142f2f6403ad999e580458038}
+      \strng{authorfullhashraw}{0a35ec0142f2f6403ad999e580458038}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{24}
+      \field{title}{Global and regional drivers of accelerating CO$_2$ emissions}
+      \field{volume}{104}
+      \field{year}{2007}
+      \field{pages}{10288\bibrangedash 10293}
+      \range{pages}{6}
+    \endentry
+    \entry{zhang2021multienv}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=25bbf4047d900f3760c65b01ee899dba}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=685d97480ebafb5a158e7c3dfdcb69a8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a88dfc5c55489606792d411cce65410b}
+      \strng{fullhash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \strng{fullhashraw}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \strng{bibnamehash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \strng{authorbibnamehash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \strng{authornamehash}{a88dfc5c55489606792d411cce65410b}
+      \strng{authorfullhash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \strng{authorfullhashraw}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the ACM SIGKDD Conference on Knowledge Discovery and Data Mining}
+      \field{title}{Multi-output regression for environmental monitoring: A comparative study}
+      \field{year}{2021}
+      \field{pages}{2145\bibrangedash 2155}
+      \range{pages}{11}
+    \endentry
+    \entry{lundberg2017shap}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=2a1075150e1e1dad8127b019f7ca9031}{%
+           family={Lundberg},
+           familyi={L\bibinitperiod},
+           given={Scott\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ee964079d93879aaef2382a5fff343d3}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Su-In},
+           giveni={S\bibinithyphendelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{fullhash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{fullhashraw}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{bibnamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authorbibnamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authornamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authorfullhash}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \strng{authorfullhashraw}{9cd6e49767b1dfa9f5df9a46216a8739}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{A unified approach to interpreting model predictions}
+      \field{volume}{30}
+      \field{year}{2017}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
