@@ -19,119 +19,251 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{smith2023mlclimate}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=5d0ddda3a367ceb26fbaeca02e391c22}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-        {{hash=b07d8ae1892af180c85e46a0e2c42c6a}{%
-           family={Lee},
+    \entry{rolnick2022tackling}{report}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=148ce343efcf9f02663d801b4860811c}{%
+           family={Rolnick},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4930fcddd3eccb4b8f285ae45c16eb2b}{%
+           family={Donti},
+           familyi={D\bibinitperiod},
+           given={Priya\bibnamedelima L},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4b135bffc0beeeb6562eacec402a6b50}{%
+           family={Kaack},
+           familyi={K\bibinitperiod},
+           given={Lynn\bibnamedelima H},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=cd140cfd79bb13860b7a0452a45517eb}{%
+           family={Kochanski},
+           familyi={K\bibinitperiod},
+           given={Kelly},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c84276698f0ba64d181bc35c48f6a2dd}{%
+           family={Lacoste},
            familyi={L\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e118ef8baaf3192ffb88835ec207f376}{%
+           family={Sankaran},
+           familyi={S\bibinitperiod},
+           given={Kris},
+           giveni={K\bibinitperiod}}}%
+        {{hash=cadafd759075e619b0a43e8b28b4fad5}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={Andrew\bibnamedelima Slavin},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=7d7f0c3e722587df73e493eabf4b350f}{%
+           family={Milojevic-Dupont},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6c6ce620bdaa0c5ba7d696ca961868e5}{%
+           family={Jaques},
+           familyi={J\bibinitperiod},
+           given={Natasha},
+           giveni={N\bibinitperiod}}}%
+        {{hash=aeec835d8aff8239f79e601ce08d5f07}{%
+           family={Waldman-Brown},
+           familyi={W\bibinithyphendelim B\bibinitperiod},
            given={Anna},
            giveni={A\bibinitperiod}}}%
-        {{hash=00d20f13d671aa86d9dd7d03dde55c46}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Raj},
-           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{2d05b2cf738af6ea5fe08887b681d257}
-      \strng{fullhash}{5b80d502e2711be8eca3056e894b4e46}
-      \strng{fullhashraw}{5b80d502e2711be8eca3056e894b4e46}
-      \strng{bibnamehash}{5b80d502e2711be8eca3056e894b4e46}
-      \strng{authorbibnamehash}{5b80d502e2711be8eca3056e894b4e46}
-      \strng{authornamehash}{2d05b2cf738af6ea5fe08887b681d257}
-      \strng{authorfullhash}{5b80d502e2711be8eca3056e894b4e46}
-      \strng{authorfullhashraw}{5b80d502e2711be8eca3056e894b4e46}
+      \list{institution}{1}{%
+        {ACM Computing Surveys}%
+      }
+      \strng{namehash}{e897dcfd553c4976146a12a6ebb021ce}
+      \strng{fullhash}{e5e1a617b97f4e8ee45d49522207d14c}
+      \strng{fullhashraw}{e5e1a617b97f4e8ee45d49522207d14c}
+      \strng{bibnamehash}{e897dcfd553c4976146a12a6ebb021ce}
+      \strng{authorbibnamehash}{e897dcfd553c4976146a12a6ebb021ce}
+      \strng{authornamehash}{e897dcfd553c4976146a12a6ebb021ce}
+      \strng{authorfullhash}{e5e1a617b97f4e8ee45d49522207d14c}
+      \strng{authorfullhashraw}{e5e1a617b97f4e8ee45d49522207d14c}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Environmental Data Science}
-      \field{number}{3}
-      \field{title}{Machine learning for climate projection: A review}
-      \field{volume}{12}
-      \field{year}{2023}
-      \field{pages}{45\bibrangedash 67}
-      \range{pages}{23}
+      \field{note}{Freely available on arXiv}
+      \field{title}{Tackling Climate Change with Machine Learning}
+      \field{type}{techreport}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1906.05433
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1906.05433
+      \endverb
     \endentry
-    \entry{raupach2007kaya}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{3}{}{%
-        {{hash=395688f604c151053b585e2323d88a17}{%
-           family={Raupach},
-           familyi={R\bibinitperiod},
-           given={Michael\bibnamedelima R},
-           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=499fb39eb6bace4fbd5176419e2c990d}{%
-           family={Marland},
-           familyi={M\bibinitperiod},
-           given={Gregg},
-           giveni={G\bibinitperiod}}}%
-        {{hash=6e67f77fe4702964e6cd500a96516c8a}{%
-           family={Ciais},
-           familyi={C\bibinitperiod},
-           given={Philippe},
-           giveni={P\bibinitperiod}}}%
+    \entry{ipcc2023synthesis}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=92bb724b0d9a20cee031d94d110d683a}{%
+           family={{Intergovernmental Panel on Climate Change}},
+           familyi={I\bibinitperiod}}}%
       }
-      \strng{namehash}{a5ba648a10d2fcfffa9a861b5a376eed}
-      \strng{fullhash}{0a35ec0142f2f6403ad999e580458038}
-      \strng{fullhashraw}{0a35ec0142f2f6403ad999e580458038}
-      \strng{bibnamehash}{0a35ec0142f2f6403ad999e580458038}
-      \strng{authorbibnamehash}{0a35ec0142f2f6403ad999e580458038}
-      \strng{authornamehash}{a5ba648a10d2fcfffa9a861b5a376eed}
-      \strng{authorfullhash}{0a35ec0142f2f6403ad999e580458038}
-      \strng{authorfullhashraw}{0a35ec0142f2f6403ad999e580458038}
+      \list{institution}{1}{%
+        {IPCC}%
+      }
+      \strng{namehash}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{fullhash}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{fullhashraw}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{bibnamehash}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{authorbibnamehash}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{authornamehash}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{authorfullhash}{92bb724b0d9a20cee031d94d110d683a}
+      \strng{authorfullhashraw}{92bb724b0d9a20cee031d94d110d683a}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the National Academy of Sciences}
-      \field{number}{24}
-      \field{title}{Global and regional drivers of accelerating CO$_2$ emissions}
-      \field{volume}{104}
-      \field{year}{2007}
-      \field{pages}{10288\bibrangedash 10293}
-      \range{pages}{6}
+      \field{note}{Freely available at ipcc.ch}
+      \field{title}{Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}
+      \field{type}{techreport}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/syr/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/syr/
+      \endverb
     \endentry
-    \entry{zhang2021multienv}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{hash=25bbf4047d900f3760c65b01ee899dba}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod}}}%
-        {{hash=685d97480ebafb5a158e7c3dfdcb69a8}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Li},
+    \entry{friedlingstein2022global}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=d17667751a128331cb7b557da4ad2068}{%
+           family={Friedlingstein},
+           familyi={F\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c8b9f4ff9a617269b502d5d52689f63e}{%
+           family={O'Sullivan},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=41149d7cb4262c891ddee3ba76cf1378}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima W},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=c214104529626bcbc577d277a024a29a}{%
+           family={Andrew},
+           familyi={A\bibinitperiod},
+           given={Robbie\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=770a9ebf56676050fb43c058255ab4d9}{%
+           family={Gregor},
+           familyi={G\bibinitperiod},
+           given={Luke},
            giveni={L\bibinitperiod}}}%
-        {{hash=b2eccb185095fccfeb40fdffd8b2105f}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Yu},
-           giveni={Y\bibinitperiod}}}%
+        {{hash=4eb954379487b2e6142788175b21e632}{%
+           family={Hauck},
+           familyi={H\bibinitperiod},
+           given={Judith},
+           giveni={J\bibinitperiod}}}%
+        {{hash=734ce414c40ed8cd62f27c0748fae494}{%
+           family={Le\bibnamedelima Quéré},
+           familyi={L\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           given={Corinne},
+           giveni={C\bibinitperiod}}}%
+        {{hash=392873dce0314a6aedb52d7e11e56477}{%
+           family={Luijkx},
+           familyi={L\bibinitperiod},
+           given={Ingrid\bibnamedelima T},
+           giveni={I\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=539edb98c9cc76e29d3739a626efe02e}{%
+           family={Olsen},
+           familyi={O\bibinitperiod},
+           given={Are},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fa321d840fe47ade8aefd814c8e92ac5}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Glen\bibnamedelima P},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
       }
-      \strng{namehash}{a88dfc5c55489606792d411cce65410b}
-      \strng{fullhash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
-      \strng{fullhashraw}{1834a1496fdc07d28dde9b7ad5ec6d2c}
-      \strng{bibnamehash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
-      \strng{authorbibnamehash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
-      \strng{authornamehash}{a88dfc5c55489606792d411cce65410b}
-      \strng{authorfullhash}{1834a1496fdc07d28dde9b7ad5ec6d2c}
-      \strng{authorfullhashraw}{1834a1496fdc07d28dde9b7ad5ec6d2c}
+      \list{publisher}{1}{%
+        {Copernicus Publications}%
+      }
+      \strng{namehash}{6bc6bb2741cee38a8af58298a824efa2}
+      \strng{fullhash}{99fefb3eebe1c5e2aac16596556b3bc5}
+      \strng{fullhashraw}{99fefb3eebe1c5e2aac16596556b3bc5}
+      \strng{bibnamehash}{6bc6bb2741cee38a8af58298a824efa2}
+      \strng{authorbibnamehash}{6bc6bb2741cee38a8af58298a824efa2}
+      \strng{authornamehash}{6bc6bb2741cee38a8af58298a824efa2}
+      \strng{authorfullhash}{99fefb3eebe1c5e2aac16596556b3bc5}
+      \strng{authorfullhashraw}{99fefb3eebe1c5e2aac16596556b3bc5}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the ACM SIGKDD Conference on Knowledge Discovery and Data Mining}
-      \field{title}{Multi-output regression for environmental monitoring: A comparative study}
+      \field{journaltitle}{Earth System Science Data}
+      \field{note}{Open access}
+      \field{number}{11}
+      \field{title}{Global Carbon Budget 2022}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{4811\bibrangedash 4900}
+      \range{pages}{90}
+      \verb{urlraw}
+      \verb https://essd.copernicus.org/articles/14/4811/2022/
+      \endverb
+      \verb{url}
+      \verb https://essd.copernicus.org/articles/14/4811/2022/
+      \endverb
+    \endentry
+    \entry{demir2021multi}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b99558343af5362f30da48bc1aa31dae}{%
+           family={Demir},
+           familyi={D\bibinitperiod},
+           given={Eren},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9da3d3ee20a7caf3a497129e09371712}{%
+           family={Yilmaz},
+           familyi={Y\bibinitperiod},
+           given={Ayse},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bcba0ae260e7c7b43f96d0769f4d569b}{%
+           family={Kaya},
+           familyi={K\bibinitperiod},
+           given={Mehmet},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{1c123429bdf7bc9f0cfc69c079d13898}
+      \strng{fullhash}{2b9f212a79bea8eea56825021377fd00}
+      \strng{fullhashraw}{2b9f212a79bea8eea56825021377fd00}
+      \strng{bibnamehash}{2b9f212a79bea8eea56825021377fd00}
+      \strng{authorbibnamehash}{2b9f212a79bea8eea56825021377fd00}
+      \strng{authornamehash}{1c123429bdf7bc9f0cfc69c079d13898}
+      \strng{authorfullhash}{2b9f212a79bea8eea56825021377fd00}
+      \strng{authorfullhashraw}{2b9f212a79bea8eea56825021377fd00}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sustainability}
+      \field{note}{Open access}
+      \field{number}{4}
+      \field{title}{Multi-Target Regression in Environmental Modeling: A Comparative Study}
+      \field{volume}{13}
       \field{year}{2021}
-      \field{pages}{2145\bibrangedash 2155}
-      \range{pages}{11}
+      \field{pages}{2105}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2071-1050/13/4/2105
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2071-1050/13/4/2105
+      \endverb
     \endentry
     \entry{lundberg2017shap}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -154,14 +286,52 @@
       \strng{authornamehash}{9cd6e49767b1dfa9f5df9a46216a8739}
       \strng{authorfullhash}{9cd6e49767b1dfa9f5df9a46216a8739}
       \strng{authorfullhashraw}{9cd6e49767b1dfa9f5df9a46216a8739}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems}
-      \field{title}{A unified approach to interpreting model predictions}
+      \field{note}{Freely available on arXiv}
+      \field{title}{A Unified Approach to Interpreting Model Predictions}
       \field{volume}{30}
       \field{year}{2017}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1705.07874
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1705.07874
+      \endverb
+    \endentry
+    \entry{molnar2022interpretable}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1519de263bd388a2ce312e7171b96d0d}{%
+           family={Molnar},
+           familyi={M\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{fullhash}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{fullhashraw}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{bibnamehash}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{authorbibnamehash}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{authornamehash}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{authorfullhash}{1519de263bd388a2ce312e7171b96d0d}
+      \strng{authorfullhashraw}{1519de263bd388a2ce312e7171b96d0d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{note}{Freely available online}
+      \field{title}{Interpretable Machine Learning: A Guide for Making Black Box Models Explainable}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://christophm.github.io/interpretable-ml-book/
+      \endverb
+      \verb{url}
+      \verb https://christophm.github.io/interpretable-ml-book/
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

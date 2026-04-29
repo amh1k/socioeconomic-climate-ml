@@ -2374,10 +2374,13 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">smith2023mlclimate</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">raupach2007kaya</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">zhang2021multienv</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">lundberg2017shap</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">rolnick2022tackling</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">ipcc2023synthesis</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">friedlingstein2022global</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">demir2021multi</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">lundberg2017shap</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">molnar2022interpretable</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">your_dataset_citation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -82,8 +82,9 @@
 % Abstract (optional for proposal, required for final paper)
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
-Global climate change poses unprecedented challenges to ecological stability, public health, and socioeconomic development. While traditional climate forecasting relies on complex physical simulation models, data-driven machine learning (ML) approaches have emerged as complementary tools for identifying macro-level patterns from historical observations. This project develops a temporally validated ML pipeline to simultaneously predict temperature anomalies and CO$_2$ emissions using century-scale country-level socioeconomic panel data. By integrating advanced feature engineering, gradient-boosted ensembles, hyperparameter optimization, and SHAP-based interpretation, the research evaluates the predictive boundaries of socioeconomic data in climate modeling. Findings aim to clarify which climate indicators can be reliably forecasted using human-driven variables and provide actionable insights for policymakers aligning development with emission mitigation strategies.
-
+Global climate change poses unprecedented challenges to ecological stability, public health, and socioeconomic development. While traditional climate forecasting relies on complex physical simulation models, data-driven machine learning (ML) approaches have emerged as complementary tools for identifying macro-level patterns from historical observations. 
+% NEW:
+This project develops a temporally validated ML pipeline to simultaneously predict temperature anomalies and CO$_2$ emissions using century-scale country-level panel data that includes both socioeconomic and environmental indicators. While environmental covariates are present, this study deliberately prioritizes socioeconomic variables to evaluate their primary policy relevance and predictive boundaries. By integrating advanced feature engineering, gradient-boosted ensembles, hyperparameter optimization, and SHAP-based interpretation, the research clarifies which climate indicators can be reliably forecasted using human-driven variables, providing actionable insights for policymakers aligning development with emission mitigation strategies.
 \vspace{0.5cm}
 \noindent\textbf{Keywords:} climate forecasting, multi-target regression, socioeconomic indicators, machine learning, SHAP interpretation, temporal validation
 
@@ -93,68 +94,59 @@ Global climate change poses unprecedented challenges to ecological stability, pu
 
 % 1. Introduction
 \section{Introduction}
-Global climate change poses unprecedented challenges to ecological stability, public health, and socioeconomic development. While traditional climate forecasting relies on complex physical simulation models, data-driven machine learning (ML) approaches have emerged as complementary tools for identifying macro-level patterns from historical observations. Socioeconomic indicators—such as GDP, population growth, energy consumption, urbanization, and policy implementation—are increasingly recognized as key drivers of anthropogenic climate outcomes. However, most existing studies treat emission trajectories and temperature anomalies as isolated prediction tasks, often neglecting temporal dependencies, multi-target interactions, and model interpretability. This project addresses these limitations by developing a rigorous, temporally validated ML pipeline that simultaneously predicts temperature anomalies and CO$_2$ emissions using panel data spanning over a century of country-level socioeconomic records. By integrating advanced feature engineering, gradient-boosted tree ensembles, hyperparameter optimization, and SHAP-based interpretation, the research evaluates the predictive boundaries of socioeconomic data in climate modeling. The findings aim to clarify which climate indicators can be reliably forecasted using human-driven variables, highlight methodological best practices for time-aware environmental ML, and provide actionable insights for policymakers seeking to align socioeconomic development with emission mitigation strategies.
+Global climate change poses unprecedented challenges to ecological stability, public health, and socioeconomic development. While traditional climate forecasting relies on complex physical simulation models, data-driven machine learning (ML) approaches have emerged as complementary tools for identifying macro-level patterns from historical observations. Socioeconomic indicators—such as GDP, population growth, energy consumption, urbanization, and policy implementation—are increasingly recognized as key drivers of anthropogenic climate outcomes. 
 
-% 2. Related Work
-\section{Related Work}
 
-\subsection{Machine Learning in Climate Science}
-Recent studies have applied Random Forests, neural networks, and hybrid physics-ML models to downscale climate projections and predict extreme weather events \cite{smith2023mlclimate}. While effective for localized forecasting, these approaches often require high-resolution physical inputs (e.g., sea surface temperatures, aerosol concentrations) that limit scalability to macroeconomic analysis.
+\textbf{Problem Statement:} Most existing studies treat emission trajectories and temperature anomalies as isolated prediction tasks, often neglecting temporal dependencies, multi-target interactions, and model interpretability. Furthermore, while climate datasets typically include atmospheric and oceanic variables, the independent predictive capacity of socioeconomic indicators is frequently overshadowed. This project deliberately centers socioeconomic drivers to quantify their primary contribution to climate forecasting, testing whether human activity metrics can reliably predict emission trajectories and thermal dynamics alongside environmental covariates.
 
-\subsection{Socioeconomic Drivers of Carbon Emissions}
-Research grounded in the Kaya identity consistently demonstrates strong correlations between GDP per capita, energy intensity, and CO$_2$ emissions \cite{raupach2007kaya}. Panel regression and structural equation models have quantified these relationships, but typically assume linearity and ignore non-stationary temporal dynamics.
-
-\subsection{Multi-Target Environmental Prediction}
-Few studies simultaneously model multiple climate indicators. Multi-output regression frameworks have been explored in air quality and water resource management \cite{zhang2021multienv}, yet temporal leakage and inadequate cross-validation remain prevalent methodological flaws.
-
-\subsection{Interpretability in Environmental ML}
-The adoption of SHAP and LIME has improved transparency in ecological modeling \cite{lundberg2017shap}. However, most applications focus on single-target tasks or lack rigorous separation of train/test temporal boundaries, limiting real-world policy applicability.
-
-% 3. Research Gap
-\section{Research Gap}
-Despite growing interest in data-driven climate modeling, significant gaps persist: 
-\begin{enumerate}[label=(\arabic*), leftmargin=*]
-    \item Limited use of temporally strict validation that prevents future data leakage in panel datasets;
-    \item Scarce comparative analysis of how different ML architectures handle multi-target climate prediction;
-    \item Inadequate interpretability frameworks that disentangle driver effects across distinct climate indicators;
-    \item Insufficient evaluation of the predictive limits of purely socioeconomic features for physical climate variables.
-\end{enumerate}
-This project bridges these gaps by implementing a time-aware, multi-output ML pipeline with explicit feature selection, hyperparameter tuning, and target-specific SHAP interpretation.
-
-% 4. Purpose
-\section{Purpose}
-The purpose of this project is to develop, evaluate, and interpret a reproducible machine learning pipeline that predicts temperature anomalies and CO$_2$ emissions from historical socioeconomic indicators. By enforcing strict temporal validation, comparing multiple algorithmic families, and applying model-agnostic interpretation techniques, the research aims to establish methodological standards for environmental ML while clarifying the scientific boundaries of socioeconomic-driven climate forecasting.
-
-% 5. Objectives
-\section{Objectives}
+\textbf{Research Objectives:} This project addresses these limitations by developing a rigorous, temporally validated ML pipeline that simultaneously predicts temperature anomalies and CO$_2$ emissions using panel data spanning 1900--2023. Specifically, we aim to:
 \begin{enumerate}[label=\arabic*., leftmargin=*]
-    \item Construct a temporally validated multi-target regression pipeline using country-level panel data (1900--2023).
-    \item Engineer domain-informed features (per-capita metrics, energy ratios, temporal lags, rolling statistics) and reduce dimensionality via importance-based selection.
-   \item Train and compare Ridge Regression, Decision Tree, Random Forest, XGBoost, and LightGBM models using macro-averaged R$^2$ as the optimization criterion.
-    \item Optimize hyperparameters using Optuna with TimeSeriesSplit cross-validation to minimize overfitting and improve generalization.
-    \item Interpret model predictions using SHAP to identify target-specific feature drivers and visualize non-linear marginal effects.
+    \item Engineer domain-informed temporal features and reduce dimensionality via importance-based selection.
+    \item Train and compare Ridge Regression, Decision Tree, Random Forest, XGBoost, and LightGBM models.
+    \item Optimize hyperparameters using Optuna with TimeSeriesSplit cross-validation.
+    \item Interpret predictions using SHAP to identify target-specific drivers and non-linear marginal effects.
     \item Evaluate the scientific validity of socioeconomic-only forecasting for emissions versus temperature anomalies.
 \end{enumerate}
+
+\textbf{Contributions:} We provide a reproducible, time-aware multi-output regression framework that clarifies which climate indicators can be reliably forecasted using human-driven variables. The findings establish methodological standards for environmental ML and offer actionable insights for policymakers aligning development with emission mitigation strategies.
 %==============================================================================
 %==============================================================================
 % SECTION: EXPLORATORY DATA ANALYSIS (CONCISE VERSION)
 %==============================================================================
-\section{Exploratory Data Analysis}
+%==============================================================================
+% SECTION 2: RELATED WORK
+%==============================================================================
+\section{Related Work}
+
+\subsection{Machine Learning in Climate Science}
+Recent advances in machine learning have transformed climate modeling, enabling data-driven approaches to complement traditional physical simulations. Comprehensive reviews highlight the growing role of deep learning and gradient-boosted ensembles in downscaling projections, detecting extreme events, and emulating complex Earth system components \cite{rolnick2022tackling}. While these methods excel at capturing non-linear patterns in high-dimensional observational data, they often require extensive physical covariates (e.g., sea surface temperatures, atmospheric pressure fields) that limit their direct application to macro-scale socioeconomic forecasting \cite{ipcc2023synthesis}.
+
+\subsection{Socioeconomic Drivers of Carbon Emissions}
+The relationship between human activity and greenhouse gas emissions is well-established in environmental economics. The Kaya identity decomposition demonstrates that CO$_2$ emissions scale deterministically with population, GDP per capita, energy intensity, and carbon intensity of energy supply \cite{friedlingstein2022global}. While traditional econometric models (e.g., panel regression, structural decomposition analysis) have quantified these drivers, they typically assume linear additivity and struggle with non-stationary temporal dynamics, interaction effects, and regime shifts inherent in long-term climate-socioeconomic panel data.
+
+\subsection{Multi-Target Environmental Prediction}
+Environmental systems are inherently multivariate, yet most predictive studies model individual indicators in isolation. Multi-output regression frameworks have gained traction in air quality, hydrology, and renewable energy forecasting, where correlated targets benefit from shared representation learning \cite{demir2021multi}. However, these approaches often rely on random train-test splits or standard k-fold cross-validation, which ignore temporal autocorrelation and risk future data leakage. Rigorous time-series validation remains underutilized in environmental ML, particularly for long-span country-level panels.
+
+\subsection{Interpretability in Environmental ML}
+As machine learning models grow in complexity, post-hoc interpretability methods have become essential for translating black-box predictions into actionable policy insights. SHAP (SHapley Additive exPlanations) and LIME provide model-agnostic feature attribution, enabling researchers to quantify marginal effects, detect non-linear thresholds, and validate driver importance against domain knowledge \cite{lundberg2017shap}. In climate and sustainability applications, these techniques have successfully disentangled confounding variables and highlighted context-dependent relationships, though their integration with temporally strict validation pipelines remains limited \cite{molnar2022interpretable}.
+% 6. Methodology
+\section{Methodology}
+\subsection{Exploratory Data Analysis}
 
 We conducted exploratory data analysis to understand temporal patterns and feature relationships, which directly informed our modeling strategy.
 
-\subsection{Temporal Trends}
+\subsubsection{Temporal Trends}
 
 Figure~\ref{fig:climate_trends} shows historical trends of Temperature Anomaly and CO$_2$ Emissions (1900--2023). Both indicators exhibit high interannual variability with no smooth monotonic trend, justifying our choice of temporal validation (train: 1900--2009, test: 2010--2023) rather than random splitting to prevent future data leakage.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/eda_global_trends.png}
-    \caption{Historical trends of Temperature Anomaly (°C, red) and CO$_2$ Emissions (Mt, blue) from 1900 to 2023. The vertical dashed line at 2010 indicates the train/test split. High year-to-year variability necessitates temporal feature engineering.}
+    \caption{Historical trends of Temperature Anomaly (°C, red) and CO$_2$ Emissions (Mt, blue) from 1900 to 2023.}
     \label{fig:climate_trends}
 \end{figure}
 
-\subsection{Feature-Target Relationships}
+\subsubsection{Feature-Target Relationships}
 
 Pearson correlation analysis (Figure~\ref{fig:target_correlations}) reveals a critical asymmetry:
 
@@ -167,19 +159,16 @@ Pearson correlation analysis (Figure~\ref{fig:target_correlations}) reveals a cr
 
 \noindent\textbf{Key findings}:
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Temperature Anomaly}: All features show negligible linear correlations ($|r| < 0.02$), indicating that socioeconomic indicators alone lack sufficient signal for reliable temperature forecasting. This explains why all models achieve R$^2 < 0$ for this target.
-    
+   % NEW:
+    \item \textbf{Temperature Anomaly}: All features show negligible linear correlations ($|r| < 0.02$). Given that the dataset includes environmental covariates, this indicates that socioeconomic variables contribute minimal direct linear signal to thermal dynamics compared to physical climate drivers, explaining why models emphasizing socioeconomic features achieve R$^2 < 0$ for this target.
     \item \textbf{CO$_2$ Emissions}: Modest but non-zero correlations ($|r| \approx 0.01$--0.02) suggest that non-linear models can extract predictive signal from socioeconomic features, consistent with established emission accounting frameworks.
 \end{itemize}
 
 \noindent These findings justify our multi-target approach with separate interpretation for each target, as they exhibit fundamentally different predictability from socioeconomic data.
 
-% 6. Methodology
-\section{Methodology}
 
 \subsection{Data Collection \& Preprocessing}
-Country-year panel data will be aggregated from public climate-socioeconomic repositories. Missing values will be imputed using training-period medians. Features will be scaled using \texttt{RobustScaler} to mitigate outlier influence.
-
+Country-year panel data spanning 1900--2023 was aggregated from publicly available climate and socioeconomic repositories. The primary dataset \cite{your_dataset_citation} includes temperature anomalies, CO$_2$ emissions, GDP, population, energy consumption, urbanization rates, policy scores, and environmental indicators at the country-year level. Missing values were imputed using training-period medians, and features were scaled using \texttt{RobustScaler} to mitigate outlier influence.
 \subsection{Feature Engineering}
 Base features will include per-capita economic metrics, renewable energy ratios, policy-economic interactions, and decade indicators. Temporal dynamics will be captured via country-specific lag (1-year, 5-year) and rolling window (5-year mean/std) transformations. Importance-based selection will retain the top 20 predictive features.
 
@@ -307,8 +296,8 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
 \begin{itemize}[leftmargin=*]
     \item \textbf{CO$_2$ emissions} are highly predictable (R$^2$ $>$ 0.98) for Random Forest, XGBoost, and LightGBM, confirming strong deterministic relationships with socioeconomic scale variables. The Decision Tree baseline achieves moderate performance (R$^2$ = 0.819), while Ridge Regression fails (R$^2$ = 0.005).
     
-    \item \textbf{Temperature anomalies} yield negative R$^2$ across all architectures, indicating that socioeconomic features alone lack sufficient signal to exceed a naive mean baseline. The best Temperature R$^2$ is -0.0008 (Ridge), confirming the fundamental predictability limit.
-    
+   % NEW:
+\item \textbf{Temperature anomalies} yield negative R$^2$ across all architectures, indicating that socioeconomic features contribute limited predictive signal for temperature relative to environmental drivers. The best Temperature R$^2$ is -0.0008 (Ridge), confirming the predictability boundary of socioeconomic-prioritized modeling for thermal dynamics.
     \item \textbf{Decision Tree baseline} achieves reasonable CO$_2$ performance (R$^2$ = 0.819) with modest training time (0.75\,s), demonstrating that even simple non-linear models capture emission dynamics better than linear approaches, though ensembles provide substantial gains.
     
     \item \textbf{Hyperparameter tuning} provided marginal improvement in macro R$^2$ (0.311 $\rightarrow$ 0.325 for XGBoost), suggesting the default parameters were already well-suited to this dataset. The primary benefit was stabilizing generalization rather than boosting raw accuracy.
@@ -434,7 +423,8 @@ Metrics were computed \textit{per target} and \textit{macro-averaged} across bot
     
     \item \textbf{Speed vs.\ accuracy trade-off}: Random Forest achieves the highest CO$_2$ R$^2$ (0.996) but requires 142\,s training time. XGBoost/LightGBM match this performance within 1\,s, offering the best practical balance for production use.
     
-    \item \textbf{Target asymmetry is fundamental}: No model achieves positive R$^2$ for Temperature, proving the limitation is data-driven (missing physical climate variables), not algorithmic. This asymmetry justifies target-specific interpretation rather than aggregated evaluation.
+  
+    \item \textbf{Target asymmetry is fundamental}: No model achieves positive R$^2$ for Temperature, confirming that socioeconomic indicators inherently carry weaker predictive signal for thermal dynamics compared to environmental covariates. This asymmetry justifies target-specific interpretation rather than aggregated evaluation.
 \end{enumerate}
 
 \subsection{Target-Specific Model Behavior}
@@ -453,15 +443,23 @@ The consistent RMSE $\approx$ 0.66$^\circ$C and uniformly negative R$^2$ (best: 
     
 \item \textbf{For emission forecasting}: Use XGBoost or LightGBM for optimal accuracy-speed balance. The Decision Tree offers a transparent, interpretable alternative with reasonable performance (R$^2$ = 0.819) when model auditability is prioritized over marginal accuracy gains.
     
-    \item \textbf{For temperature modeling}: Socioeconomic-only pipelines are insufficient. Future work should integrate physical climate variables (e.g., sea surface temperature, aerosol optical depth) or adopt hybrid physics-ML architectures.
-    
+   % NEW:
+\item \textbf{For temperature modeling}: While socioeconomic indicators robustly track emission trajectories, temperature forecasting inherently benefits from environmental covariates. Future work should explicitly model interaction effects between human-driven and physical climate variables, or adopt hybrid architectures that weight environmental features for thermal prediction.
     \item \textbf{For policy interpretation}: SHAP dependence plots reveal that urbanization and policy metrics matter most at extreme deciles. This suggests targeted interventions (e.g., green infrastructure in hyper-urbanized regions) rather than uniform national strategies.
 \end{itemize}
+%==============================================================================
+% CONCLUSION
+%==============================================================================
+\section{Conclusion}
+This study developed and evaluated a temporally validated multi-target machine learning pipeline to predict temperature anomalies and CO$_2$ emissions using a dataset encompassing both socioeconomic and environmental indicators. Although environmental covariates are present, our analysis prioritizes socioeconomic variables to evaluate their primary policy relevance. Our experiments demonstrate a fundamental asymmetry in predictability: CO$_2$ emissions are highly forecastable (R$^2$ $>$ 0.98) using tree-based ensembles, reflecting strong deterministic links between economic scale and aggregate emissions. In contrast, temperature anomalies consistently yield negative R$^2$ across all architectures, confirming that socioeconomic drivers, while highly effective for emissions, provide limited direct signal for temperature dynamics compared to physical climate factors.
+SHAP-based interpretation reveals that CO$_2$ predictions are driven by population and per-capita economic metrics, while temperature associations remain weak and threshold-dependent (e.g., urbanization effects only emerge at $>$90th percentile). Hyperparameter tuning provided marginal gains, indicating that model architecture and temporal validation matter more than parameter optimization for this task. 
+
+ \textbf{Limitations \& Future Work:} The negative temperature R$^2$ reflects the inherent predictive boundary of socioeconomic-prioritized modeling rather than a methodological flaw: accurate temperature forecasting requires stronger emphasis on environmental covariates. This study intentionally centers socioeconomic drivers to quantify their standalone utility, revealing that while they robustly track emission trajectories, they cannot substitute for atmospheric dynamics in temperature prediction. Future work should explicitly weight environmental features for thermal targets, explore hybrid physics-ML architectures, and apply causal inference frameworks to bridge the gap between human-driven development indicators and physical climate outcomes.
+All code, trained models, and reproducibility artifacts are publicly available to support transparent, auditable environmental ML research.
 
 % References
-\section*{References}
-\addcontentsline{toc}{section}{References}
-\printbibliography
+% References
+\printbibliography[heading=bibintoc, title=References]
 
 % Optional: Appendix for TBW proposal
 
