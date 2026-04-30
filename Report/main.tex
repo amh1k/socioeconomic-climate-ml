@@ -54,15 +54,13 @@
 % === TITLE PAGE ===
 \title{
     \vspace{-2cm}
-    \textbf{\Large Predicting Climate Anomalies and Emissions from Socioeconomic Indicators: \\ A Multi-Target Machine Learning Approach}
+    \textbf{\Socioeconomic Drivers of Climate Change: \\ A Multi-Target Machine Learning Analysis for Predicting Temperature Anomalies and CO2 Emissions }
     \vspace{0.5cm}
 }
 \author{
     \textbf{Group Members:}\\[0.3cm]
     Abdul Moiz Hussain -- 23K-0553\\
-    Muhammed Abdullah Khan -- 23K-0607\\
-    Name 3 -- [ID/Role]\\
-    Name 4 -- [ID/Role]
+    Muhammed Abdullah Khan -- 23K-0607
 }
 \date{
     \textbf{Course:} Data Science\\
@@ -183,7 +181,22 @@ Performance will be measured using RMSE, MAE, and R$^2$ per target and macro-ave
 
 \subsection{Reproducibility}
 The pipeline will be modularized (\texttt{src/data\_loader.py}, \texttt{src/feature\_engineering.py}) and orchestrated via Jupyter notebooks. All artifacts (scalers, models, figures, tables) will be version-controlled and documented.
+%==============================================================================
+% PROJECT DURATION & EXECUTION TIMELINE
+%==============================================================================
+\section{Project Duration \& Execution Timeline}
+The complete development, evaluation, and interpretation of this multi-target climate forecasting pipeline was conducted over a structured \textbf{12-week period}, organized into six iterative phases that align with the project methodology, experimental workflow, and reporting milestones:
 
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Weeks 1--2 (Problem Definition \& Exploratory Analysis):} Literature synthesis, dataset acquisition, initial temporal trend visualization, and Pearson correlation analysis to identify the fundamental asymmetry between CO$_2$ and temperature predictability.
+    \item \textbf{Weeks 3--4 (Preprocessing \& Feature Engineering):} Implementation of strict temporal validation (train: 1900--2009, test: 2010--2023), training-period median imputation, \texttt{RobustScaler} application, country-specific lag/rolling feature creation, and importance-based reduction to the top 20 socioeconomic indicators.
+    \item \textbf{Weeks 5--6 (Model Implementation \& Baseline Evaluation):} Development of the \texttt{MultiOutputRegressor} framework, training of Ridge, Decision Tree, Random Forest, XGBoost, and LightGBM baselines, and initial macro-R$^2$ benchmarking.
+    \item \textbf{Weeks 7--8 (Hyperparameter Optimization):} Integration of Optuna with 3-fold \texttt{TimeSeriesSplit} cross-validation, macro-averaged R$^2$ objective tuning, and selection of the final XGBoost configuration (\texttt{max\_depth=4}, \texttt{learning\_rate=0.048}, \texttt{subsample=0.625}).
+    \item \textbf{Weeks 9--10 (Interpretation \& Validation):} SHAP-based global importance ranking, dependence and marginal effect plotting, and target-specific driver analysis to quantify the predictive boundary of socioeconomic-prioritized modeling.
+    \item \textbf{Weeks 11--12 (Synthesis \& Reporting):} Comparative model analysis, accuracy-speed trade-off evaluation, limitation documentation, final figure/table generation, manuscript drafting, and reproducibility audit.
+\end{itemize}
+
+This phased execution ensured that temporal leakage was prevented at every stage, feature selection was driven by empirical importance rather than arbitrary thresholds, and interpretation was conducted separately for each target to respect their distinct physical and socioeconomic drivers. All code, serialized artifacts, and environment specifications were version-controlled throughout the duration to support transparency and open science standards.
 %==============================================================================
 % SECTION 5: IMPLEMENTATION (CODE & MODELS) - MANDATORY
 %==============================================================================
@@ -245,17 +258,23 @@ X_test_scaled  = scaler.transform(X_test_sel)   # No refitting!
 \end{lstlisting}
 
 Model training uses a unified multi-output wrapper:
-\begin{lstlisting}[language=Python, caption={Multi-target model training with XGBoost}, label=lst:training]
+Model training uses a unified multi-output wrapper with Optuna-optimized hyperparameters:
+\begin{lstlisting}[language=Python, caption={Multi-target model training with optimized XGBoost}, label=lst:training]
 from sklearn.multioutput import MultiOutputRegressor
 from xgboost import XGBRegressor
 
+# Best hyperparameters from Optuna tuning (maximizes macro R²)
+best_params = {
+    'n_estimators': 190, 
+    'max_depth': 4, 
+    'learning_rate': 0.048,
+    'subsample': 0.625,
+    'random_state': 42,
+    'n_jobs': -1
+}
+
 # Wrap base estimator for simultaneous prediction of both targets
-model = MultiOutputRegressor(
-    XGBRegressor(
-        n_estimators=190, max_depth=4, learning_rate=0.048,
-        subsample=0.625, random_state=42, n_jobs=-1
-    )
-)
+model = MultiOutputRegressor(XGBRegressor(**best_params))
 model.fit(X_train_scaled, y_train)  # Train on 1900-2009 data
 \end{lstlisting}
 

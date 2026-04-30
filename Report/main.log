@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.28)  29 APR 2026 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.28)  30 APR 2026 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,24 +677,24 @@ Package csquotes Info: ... none found.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -730,7 +730,7 @@ LaTeX Font Info:    ... okay on input line 74.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 74.
+Package hyperref Info: Link coloring ON on input line 72.
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -749,8 +749,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 74.
-Package biblatex Info: Reference segment=0 on input line 74.
+Package biblatex Info: Reference section=0 on input line 72.
+Package biblatex Info: Reference segment=0 on input line 72.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -777,7 +777,19 @@ e
 \c@lstlisting=\count467
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- [1
+
+! Undefined control sequence.
+<recently read> \Socioeconomic 
+                               
+l.76 \thispagestyle
+                   {empty}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}] (./main.toc [2])
@@ -785,29 +797,29 @@ Package caption Info: End \AtBeginDocument code.
 \openout5 = `main.toc'.
 
  [3]
-Overfull \hbox (2.86066pt too wide) in paragraph at lines 104--105
+Overfull \hbox (2.86066pt too wide) in paragraph at lines 102--103
 []\T1/cmr/m/n/12 Engineer domain-informed tem-po-ral fea-tures and re-duce di-m
 en-sion-al-ity via importance-
  []
 
 
-Overfull \hbox (2.90926pt too wide) in paragraph at lines 111--119
+Overfull \hbox (2.90926pt too wide) in paragraph at lines 109--117
 []\T1/cmr/bx/n/12 Contributions: \T1/cmr/m/n/12 We pro-vide a re-pro-ducible, t
 ime-aware multi-output re-gres-sion frame-
  []
 
 [4] [5]
-<figures/eda_global_trends.png, id=222, 860.4948pt x 354.6048pt>
+<figures/eda_global_trends.png, id=227, 860.4948pt x 354.6048pt>
 File: figures/eda_global_trends.png Graphic file (type png)
 <use figures/eda_global_trends.png>
-Package pdftex.def Info: figures/eda_global_trends.png  used on input line 144.
+Package pdftex.def Info: figures/eda_global_trends.png  used on input line 142.
 
 (pdftex.def)             Requested size: 432.48051pt x 178.2272pt.
-<figures/eda_target_correlations_both.png, id=225, 784.1295pt x 570.6921pt>
+<figures/eda_target_correlations_both.png, id=230, 784.1295pt x 570.6921pt>
 File: figures/eda_target_correlations_both.png Graphic file (type png)
 <use figures/eda_target_correlations_both.png>
 Package pdftex.def Info: figures/eda_target_correlations_both.png  used on inpu
-t line 155.
+t line 153.
 (pdftex.def)             Requested size: 432.48051pt x 314.76112pt.
 
 
@@ -815,17 +827,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/
 eda_global_trends.png>] [7 <./figures/eda_target_correlations_both.png>]
-Overfull \hbox (36.43661pt too wide) in paragraph at lines 176--177
+Overfull \hbox (36.43661pt too wide) in paragraph at lines 174--175
 \T1/cmr/m/n/12 A \T1/cmtt/m/n/12 MultiOutputRegressor \T1/cmr/m/n/12 wrap-per w
 ill en-able si-mul-ta-ne-ous pre-dic-tion of \T1/cmtt/m/n/12 Temperature_Anomal
 y
  []
 
-[8] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[8]
+Overfull \hbox (34.51128pt too wide) in paragraph at lines 194--195
+\T1/cmr/m/n/12 of the fi-nal XG-Boost con-fig-u-ra-tion (\T1/cmtt/m/n/12 max_de
+pth=4\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 learning_rate=0.048\T1/cmr/m/n/12 , \T1/c
+mtt/m/n/12 subsample=0.625\T1/cmr/m/n/12 ). 
+ []
+
+
+Overfull \hbox (31.87157pt too wide) in paragraph at lines 196--197
+\T1/cmr/m/n/12 speed trade-off eval-u-a-tion, lim-i-ta-tion doc-u-men-ta-tion, 
+fi-nal fig-ure/table gen-er-a-tion, manuscript
+ []
+
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
+) [9]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 203.
+nput line 216.
 
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@\lst@EC�).
@@ -834,7 +859,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.205 ├── 
+l.218 ├── 
                 src/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -849,7 +874,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.205 ├── 
+l.218 ├── 
                 src/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -864,7 +889,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.205 ├── 
+l.218 ├── 
                 src/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -879,7 +904,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.205 ├── 
+l.218 ├── 
                 src/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -894,7 +919,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 │ 
+l.219 │ 
             ├── data_loader.py          # Raw data loading & aggregation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -909,7 +934,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 │ 
+l.219 │ 
             ├── data_loader.py          # Raw data loading & aggregation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -924,7 +949,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 │   ├── 
+l.219 │   ├── 
                       data_loader.py          # Raw data loading & aggregation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -939,7 +964,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 │   ├── 
+l.219 │   ├── 
                       data_loader.py          # Raw data loading & aggregation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -954,7 +979,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 │   ├── 
+l.219 │   ├── 
                       data_loader.py          # Raw data loading & aggregation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -969,7 +994,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 │   ├── 
+l.219 │   ├── 
                       data_loader.py          # Raw data loading & aggregation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -984,7 +1009,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 │ 
+l.220 │ 
             └── feature_engineering.py  # Feature creation & selection
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -999,7 +1024,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 │ 
+l.220 │ 
             └── feature_engineering.py  # Feature creation & selection
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1014,7 +1039,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 │   └── 
+l.220 │   └── 
                       feature_engineering.py  # Feature creation & selection
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1029,7 +1054,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 │   └── 
+l.220 │   └── 
                       feature_engineering.py  # Feature creation & selection
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1044,7 +1069,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 │   └── 
+l.220 │   └── 
                       feature_engineering.py  # Feature creation & selection
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1059,7 +1084,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 │   └── 
+l.220 │   └── 
                       feature_engineering.py  # Feature creation & selection
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1074,7 +1099,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208 ├── 
+l.221 ├── 
                 notebooks/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1089,7 +1114,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208 ├── 
+l.221 ├── 
                 notebooks/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1104,7 +1129,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208 ├── 
+l.221 ├── 
                 notebooks/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1119,7 +1144,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208 ├── 
+l.221 ├── 
                 notebooks/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1134,7 +1159,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 │ 
+l.222 │ 
             ├── 01_eda.ipynb            # Exploratory data analysis
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1149,7 +1174,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 │ 
+l.222 │ 
             ├── 01_eda.ipynb            # Exploratory data analysis
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1164,7 +1189,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 │   ├── 
+l.222 │   ├── 
                       01_eda.ipynb            # Exploratory data analysis
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1179,7 +1204,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 │   ├── 
+l.222 │   ├── 
                       01_eda.ipynb            # Exploratory data analysis
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1194,7 +1219,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 │   ├── 
+l.222 │   ├── 
                       01_eda.ipynb            # Exploratory data analysis
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1209,7 +1234,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 │   ├── 
+l.222 │   ├── 
                       01_eda.ipynb            # Exploratory data analysis
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1224,7 +1249,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 │ 
+l.223 │ 
             ├── 02_preprocessing.ipynb  # Feature engineering pipeline
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1239,7 +1264,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 │ 
+l.223 │ 
             ├── 02_preprocessing.ipynb  # Feature engineering pipeline
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1254,7 +1279,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 │   ├── 
+l.223 │   ├── 
                       02_preprocessing.ipynb  # Feature engineering pipeline
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1269,7 +1294,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 │   ├── 
+l.223 │   ├── 
                       02_preprocessing.ipynb  # Feature engineering pipeline
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1284,7 +1309,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 │   ├── 
+l.223 │   ├── 
                       02_preprocessing.ipynb  # Feature engineering pipeline
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1299,7 +1324,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 │   ├── 
+l.223 │   ├── 
                       02_preprocessing.ipynb  # Feature engineering pipeline
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1314,7 +1339,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 │ 
+l.224 │ 
             ├── 03_modeling.ipynb       # Training, tuning, evaluation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1329,7 +1354,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 │ 
+l.224 │ 
             ├── 03_modeling.ipynb       # Training, tuning, evaluation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1344,7 +1369,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 │   ├── 
+l.224 │   ├── 
                       03_modeling.ipynb       # Training, tuning, evaluation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1359,7 +1384,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 │   ├── 
+l.224 │   ├── 
                       03_modeling.ipynb       # Training, tuning, evaluation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1374,7 +1399,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 │   ├── 
+l.224 │   ├── 
                       03_modeling.ipynb       # Training, tuning, evaluation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1389,7 +1414,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 │   ├── 
+l.224 │   ├── 
                       03_modeling.ipynb       # Training, tuning, evaluation
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1404,7 +1429,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 │ 
+l.225 │ 
             └── 04_interpretation.ipynb # SHAP analysis & visualization
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1419,7 +1444,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 │ 
+l.225 │ 
             └── 04_interpretation.ipynb # SHAP analysis & visualization
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1434,7 +1459,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 │   └── 
+l.225 │   └── 
                       04_interpretation.ipynb # SHAP analysis & visualization
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1449,7 +1474,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 │   └── 
+l.225 │   └── 
                       04_interpretation.ipynb # SHAP analysis & visualization
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1464,7 +1489,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 │   └── 
+l.225 │   └── 
                       04_interpretation.ipynb # SHAP analysis & visualization
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1479,7 +1504,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 │   └── 
+l.225 │   └── 
                       04_interpretation.ipynb # SHAP analysis & visualization
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1494,7 +1519,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ├── 
+l.226 ├── 
                 data/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1509,7 +1534,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ├── 
+l.226 ├── 
                 data/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1524,7 +1549,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ├── 
+l.226 ├── 
                 data/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1539,7 +1564,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 ├── 
+l.226 ├── 
                 data/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1554,7 +1579,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 │ 
+l.227 │ 
             ├── raw/                    # Original CSV files
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1569,7 +1594,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 │ 
+l.227 │ 
             ├── raw/                    # Original CSV files
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1584,7 +1609,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 │   ├── 
+l.227 │   ├── 
                       raw/                    # Original CSV files
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1599,7 +1624,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 │   ├── 
+l.227 │   ├── 
                       raw/                    # Original CSV files
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1614,7 +1639,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 │   ├── 
+l.227 │   ├── 
                       raw/                    # Original CSV files
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1629,7 +1654,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 │   ├── 
+l.227 │   ├── 
                       raw/                    # Original CSV files
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1644,7 +1669,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 │ 
+l.228 │ 
             └── processed/              # Cleaned & engineered datasets
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1659,7 +1684,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 │ 
+l.228 │ 
             └── processed/              # Cleaned & engineered datasets
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1674,7 +1699,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 │   └── 
+l.228 │   └── 
                       processed/              # Cleaned & engineered datasets
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1689,7 +1714,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 │   └── 
+l.228 │   └── 
                       processed/              # Cleaned & engineered datasets
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1704,7 +1729,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 │   └── 
+l.228 │   └── 
                       processed/              # Cleaned & engineered datasets
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1719,7 +1744,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 │   └── 
+l.228 │   └── 
                       processed/              # Cleaned & engineered datasets
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1734,7 +1759,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 ├── 
+l.229 ├── 
                 models/                     # Serialized models & scalers (....
 
 The document does not appear to be in UTF-8 encoding.
@@ -1750,7 +1775,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 ├── 
+l.229 ├── 
                 models/                     # Serialized models & scalers (....
 
 The document does not appear to be in UTF-8 encoding.
@@ -1766,7 +1791,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 ├── 
+l.229 ├── 
                 models/                     # Serialized models & scalers (....
 
 The document does not appear to be in UTF-8 encoding.
@@ -1782,7 +1807,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 ├── 
+l.229 ├── 
                 models/                     # Serialized models & scalers (....
 
 The document does not appear to be in UTF-8 encoding.
@@ -1798,7 +1823,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 └── 
+l.230 └── 
                 outputs/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1813,7 +1838,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 └── 
+l.230 └── 
                 outputs/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1828,7 +1853,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 └── 
+l.230 └── 
                 outputs/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1843,7 +1868,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 └── 
+l.230 └── 
                 outputs/
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1858,7 +1883,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218     ├── 
+l.231     ├── 
                     figures/                # Publication-ready plots (300 DPI)
 
 The document does not appear to be in UTF-8 encoding.
@@ -1874,7 +1899,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218     ├── 
+l.231     ├── 
                     figures/                # Publication-ready plots (300 DPI)
 
 The document does not appear to be in UTF-8 encoding.
@@ -1890,7 +1915,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218     ├── 
+l.231     ├── 
                     figures/                # Publication-ready plots (300 DPI)
 
 The document does not appear to be in UTF-8 encoding.
@@ -1906,7 +1931,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218     ├── 
+l.231     ├── 
                     figures/                # Publication-ready plots (300 DPI)
 
 The document does not appear to be in UTF-8 encoding.
@@ -1922,7 +1947,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219     └── 
+l.232     └── 
                     tables/                 # CSV exports for appendix
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1937,7 +1962,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219     └── 
+l.232     └── 
                     tables/                 # CSV exports for appendix
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1952,7 +1977,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219     └── 
+l.232     └── 
                     tables/                 # CSV exports for appendix
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1967,7 +1992,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219     └── 
+l.232     └── 
                     tables/                 # CSV exports for appendix
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1975,28 +2000,59 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[9] [10]
-Overfull \hbox (100.37445pt too wide) in paragraph at lines 281--294
+[10]
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.266 ... from Optuna tuning (maximizes macro R²)
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "B2.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.266 ... from Optuna tuning (maximizes macro R²)
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[11]
+Overfull \hbox (100.37445pt too wide) in paragraph at lines 300--313
  [][] 
  []
 
-[11]
-<figures/final_model_comparison.png, id=313, 1004.553pt x 352.4367pt>
+[12]
+<figures/final_model_comparison.png, id=327, 1004.553pt x 352.4367pt>
 File: figures/final_model_comparison.png Graphic file (type png)
 <use figures/final_model_comparison.png>
 Package pdftex.def Info: figures/final_model_comparison.png  used on input line
- 310.
+ 329.
 (pdftex.def)             Requested size: 432.48051pt x 151.73305pt.
-<figures/shap_summary_temp.png, id=314, 563.2242pt x 675.7245pt>
+<figures/shap_summary_temp.png, id=328, 563.2242pt x 675.7245pt>
 File: figures/shap_summary_temp.png Graphic file (type png)
 <use figures/shap_summary_temp.png>
-Package pdftex.def Info: figures/shap_summary_temp.png  used on input line 329.
+Package pdftex.def Info: figures/shap_summary_temp.png  used on input line 348.
 
 (pdftex.def)             Requested size: 218.51521pt x 262.16017pt.
-<figures/shap_summary_co2.png, id=315, 563.2242pt x 675.7245pt>
+<figures/shap_summary_co2.png, id=329, 563.2242pt x 675.7245pt>
 File: figures/shap_summary_co2.png Graphic file (type png)
 <use figures/shap_summary_co2.png>
-Package pdftex.def Info: figures/shap_summary_co2.png  used on input line 337.
+Package pdftex.def Info: figures/shap_summary_co2.png  used on input line 356.
 (pdftex.def)             Requested size: 218.51521pt x 262.16017pt.
 
 
@@ -2005,75 +2061,72 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/eda_target_correlations_both.png Graphic file (type png)
 <use figures/eda_target_correlations_both.png>
 Package pdftex.def Info: figures/eda_target_correlations_both.png  used on inpu
-t line 354.
+t line 373.
 (pdftex.def)             Requested size: 432.48051pt x 314.76112pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/shap_marginal_effects_comparison.png, id=316, 1001.9031pt x 350.9913pt
+<figures/shap_marginal_effects_comparison.png, id=330, 1001.9031pt x 350.9913pt
 >
 File: figures/shap_marginal_effects_comparison.png Graphic file (type png)
 <use figures/shap_marginal_effects_comparison.png>
 Package pdftex.def Info: figures/shap_marginal_effects_comparison.png  used on 
-input line 377.
+input line 396.
 (pdftex.def)             Requested size: 432.48051pt x 151.50708pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12 <./figures/final_model_comparison.png>] [13 <./figures/shap_summary_temp.pn
-g> <./figures/shap_summary_co2.png>]
+[13 <./figures/final_model_comparison.png>] [14 <./figures/shap_summary_temp.pn
+g> <./figures/shap_summary_co2.png>] [15 <./figures/shap_marginal_effects_compa
+rison.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 431.
+(hyperref)                removing `math shift' on input line 450.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 431.
+(hyperref)                removing `subscript' on input line 450.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 431.
+(hyperref)                removing `math shift' on input line 450.
 
-[14 <./figures/shap_marginal_effects_comparison.png>] [15] [16] [17]
-(./main.aux)
+[16] [17] [18] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 12203F46F454DC7B6802B8E280333D12;6626.
+(rerunfilecheck)             Checksum: 4AFDF7072AF5D612A537B0B59C234678;6870.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22480 strings out of 469515
- 381534 string characters out of 5470807
- 1381403 words of memory out of 5000000
- 50783 multiletter control sequences out of 15000+600000
- 643307 words of font info for 76 fonts, out of 8000000 for 9000
+ 22483 strings out of 469515
+ 381560 string characters out of 5470807
+ 1413382 words of memory out of 5000000
+ 50780 multiletter control sequences out of 15000+600000
+ 642530 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,10n,100p,906b,1562s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,100p,906b,1572s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/
-fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/pub
+fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/cm-super/sfit1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sf
 rm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1
 /public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
 r/sftt1200.pfb>
-Output written on main.pdf (17 pages, 2468095 bytes).
+Output written on main.pdf (18 pages, 2473145 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 120 named destinations out of 1000 (max. 500000)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

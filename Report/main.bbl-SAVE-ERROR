@@ -333,6 +333,37 @@
       \verb https://christophm.github.io/interpretable-ml-book/
       \endverb
     \endentry
+    \entry{your_dataset_citation}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{hash=e28fb219203595a0a0bbda024303d135}{%
+           family={{Ankit}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{e28fb219203595a0a0bbda024303d135}
+      \strng{fullhash}{e28fb219203595a0a0bbda024303d135}
+      \strng{fullhashraw}{e28fb219203595a0a0bbda024303d135}
+      \strng{bibnamehash}{e28fb219203595a0a0bbda024303d135}
+      \strng{authorbibnamehash}{e28fb219203595a0a0bbda024303d135}
+      \strng{authornamehash}{e28fb219203595a0a0bbda024303d135}
+      \strng{authorfullhash}{e28fb219203595a0a0bbda024303d135}
+      \strng{authorfullhashraw}{e28fb219203595a0a0bbda024303d135}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2026-05-01}
+      \field{title}{Global Warming Dataset: 195 Countries (1900-2023): This dataset provides a detailed exploration of global warming and climate change trends across 195 countries from 1900 to 2023. It includes 1,00,000 rows and 26 columns, capturing environmental, economic, and societal factors impacting global warming}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/ankushpanday1/global-warming-dataset-195-countries-1900-2023
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/ankushpanday1/global-warming-dataset-195-countries-1900-2023
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
